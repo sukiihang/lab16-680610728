@@ -114,7 +114,7 @@ export default function CoursesPage() {
         </div>
 
         <Dialog open={openDialog} onOpenChange={setOpenDialog}>
-          <DialogTrigger asChild>
+          <DialogTrigger>
             <Button className="gap-1">
               <Plus className="h-4 w-4" /> เพิ่มวิชา
             </Button>
@@ -285,7 +285,7 @@ export default function CoursesPage() {
                   </TableCell>
                   <TableCell className="text-right">
                     <AlertDialog>
-                      <AlertDialogTrigger asChild>
+                      <AlertDialogTrigger>
                         <Button
                           variant="ghost"
                           size="icon"

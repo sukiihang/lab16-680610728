@@ -87,7 +87,7 @@ export default function EnrollmentsPage() {
         </div>
 
         <Dialog open={openDialog} onOpenChange={setOpenDialog}>
-          <DialogTrigger asChild>
+          <DialogTrigger>
             <Button className="gap-1">
               <Plus className="h-4 w-4" /> ลงทะเบียนให้นักศึกษา
             </Button>
@@ -103,7 +103,7 @@ export default function EnrollmentsPage() {
                 <Select
                   value={selectedCourseCode}
                   onValueChange={(val) => {
-                    setSelectedCourseCode(val);
+                    setSelectedCourseCode(val ?? "");
                     setSelectedStudentIds([]);
                     setStudentSearchInput("");
                   }}

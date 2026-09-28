@@ -1,17 +1,14 @@
-interface Student {
-  studentId: string;
+export interface Student {
+  id: string;
   firstName: string;
   lastName: string;
-  program: "CPE" | "ISNE";
+  studentId: string;
   status: "Active" | "Inactive";
-  enrolledCourses: string[]; // รายชื่อวิชา เช่น ["CS101", "CS201"]
+  enrolledCourses: string[];
 }
-export type { Student };
 
-// วิชาที่เปิดสอน — เพิ่มใหม่ได้จากหน้า "จัดการวิชาเรียน" (/admin/courses)
-interface Course {
-  courseCode: string; // เช่น "CPE301" — ค่านี้คือค่าเดียวกับที่ไปอยู่ใน Student.enrolledCourses
-  courseTitle: string;
+export interface Course {
+  courseCode: string;
+  title: string;
   instructors?: string[];
 }
-export type { Course };

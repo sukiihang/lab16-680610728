@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
-import { Student, Course } from "./types";
+import type { Student, Course } from "./types";
 import { initialStudents, initialCourses } from "./mock-data";
 
 interface EnrollmentState {
