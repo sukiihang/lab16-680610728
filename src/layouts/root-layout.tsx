@@ -9,6 +9,20 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar";
 
+interface FooterProps {
+  firstName: string;
+  lastName: string;
+  studentId: string;
+}
+
+function Footer({ firstName, lastName, studentId }: FooterProps) {
+  return (
+    <footer className="border-t p-4 text-center text-xs text-muted-foreground">
+      จัดทำโดย {firstName} {lastName} — รหัสนักศึกษา {studentId}
+    </footer>
+  );
+}
+
 export default function RootLayout() {
   return (
     <SidebarProvider>
@@ -25,7 +39,12 @@ export default function RootLayout() {
         <main className="flex-1 p-4">
           <Outlet />
         </main>
-        <footer className="border-t p-4 text-center text-xs text-muted-foreground"></footer>
+        
+        <Footer
+          firstName="สุกฤษฏิ์"
+          lastName="วงค์อ๊อด"
+          studentId="680610728"
+        />
       </SidebarInset>
     </SidebarProvider>
   );
