@@ -1,11 +1,11 @@
 import { StrictMode } from "react";
-import { createRoot } from "react-[#root]");
+import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router";
 
 import RootLayout from "@/layouts/root-layout";
 import HomePage from "@/pages/home";
-import EnrollmentsPage from "@/pages/admin/enrollments";
 import CoursesPage from "@/pages/admin/courses";
+import EnrollmentsPage from "@/pages/admin/enrollments";
 
 import "./index.css";
 
@@ -19,17 +19,12 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "admin",
-        children: [
-          {
-            path: "courses",
-            element: <CoursesPage />,
-          },
-          {
-            path: "enrollments",
-            element: <EnrollmentsPage />,
-          },
-        ],
+        path: "admin/courses",
+        element: <CoursesPage />,
+      },
+      {
+        path: "admin/enrollments",
+        element: <EnrollmentsPage />,
       },
     ],
   },
